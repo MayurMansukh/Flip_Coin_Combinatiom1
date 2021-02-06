@@ -1,11 +1,11 @@
 #! /bin/bash -x
 
-read -p "how many times wnts flip coin :" Flip
 Tail=0;
 Head=0;
-for ((i=1; i<$Flip; i++)) 
+
+while [[ $Tail != 21 && $Head != 21 ]]
 do
-   flipCoin=$((RANDOM%2))
+  flipCoin=$((RANDOM%2))
 
 	if [ $flipCoin -eq 1 ]
 	then
