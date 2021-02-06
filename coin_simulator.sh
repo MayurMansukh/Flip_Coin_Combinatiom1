@@ -2,8 +2,7 @@
 
 Tail=0;
 Head=0;
-
-while [[ $Tail != 21 && $Head != 21 ]]
+while [[ $diff != 2 ]]
 do
   flipCoin=$((RANDOM%2))
 
@@ -13,6 +12,10 @@ do
 	else
 	    	((Head++))
 	fi
+    diff=$(($Head - $Tail))
 done
- echo "Head win $Tail Times"
- echo "Tail win $Head Times"
+
+        echo "diffrence between head or tail is $diff"
+
+	echo "Head win $Tail Times"
+	echo "Tail win $Head Times"
